@@ -1,6 +1,7 @@
 import tensorflow as tf
 import requests
 import os
+import numpy as np
 
 def load_model_from_github(model_url):
     """Download and load the model from a public GitHub repo."""
