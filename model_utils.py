@@ -4,7 +4,7 @@ import os
 
 def load_model_from_github(model_url):
     """Download and load the model from a public GitHub repo."""
-    model_path = "demo_model_v1.h5"
+    model_path = "demo_model.h5"
 
     # Check if model already exists locally
     if not os.path.exists(model_path):
