@@ -4,7 +4,8 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 
 # GitHub raw file link to the model (replace with your link)
-MODEL_URL = "https://raw.githubusercontent.com/username/repo/main/model_demo.h5"
+MODEL_URL = "https://raw.githubusercontent.com/S-t-e-v-e-G/skincheck_ai_r_demo/main/skincheckr-demo.keras"
+
 
 # Load the model (download if needed)
 model = load_model_from_github(MODEL_URL)
@@ -17,7 +18,7 @@ uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg
 
 if uploaded_file:
     # Load and preprocess the image
-    img = image.load_img(uploaded_file, target_size=(64, 64))
+    img = image.load_img(uploaded_file, target_size=(56, 56))
     img_array = image.img_to_array(img)
     img_array = np.expand_dims(img_array, axis=0) / 255.0
 
