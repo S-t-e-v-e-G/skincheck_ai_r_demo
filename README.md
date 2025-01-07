@@ -13,6 +13,7 @@ As part of a Data Science and AI development bootcamp at Le Wagon Tokyo, we deve
 We used transfer learning in combination with our own CNN to detect cases and hosted a working version using Google Cloud Run and Streamlit.
 
 For further rading and showcase see the following [Link](https://github.com/S-t-e-v-e-G/skincheck_ai_r_demo/blob/e5b7c212a12e64ccae67dddd71276fb8f7e1fe4f/Skincheck-ai-r%20Demo.pdf).
+A working demo using a simpler and smaller model can be found [Here](https://skincheckairdemo.streamlit.app/).
 <br/>
 
 **DISCLAIMER:**
