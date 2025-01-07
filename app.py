@@ -1,28 +1,38 @@
 import streamlit as st
-from model_utils import load_model_from_github, predict_image
-from tensorflow.keras.preprocessing import image
-import numpy as np
+from quickcheckr import quickcheckr
+from home import home
+from bodycheckr import bodycheckr
+from skintrackr import skintrackr
+from skindatar import skindatar
 
-# GitHub raw file link to the model (replace with your link)
-MODEL_URL = "https://raw.githubusercontent.com/S-t-e-v-e-G/skincheck_ai_r_demo/main/skincheckr-demo.keras"
+### Page Configuration ####
+st.set_page_config(page_title="skincheck(ai)R",
+                   layout="wide",
+                   initial_sidebar_state="expanded",
+                   page_icon="📖")
 
+# Sidebar for module selection
+st.sidebar.title("Navigation")
+page = st.sidebar.radio(
+    "Select a function:",
+    ["🏠 Home", "🧐 Quick Check", "🔎 Skin Check", "📊 Dashboard", "📋 Data Records"]
+)
 
-# Load the model (download if needed)
-model = load_model_from_github(MODEL_URL)
+def main():
+    if page == "🏠 Home":
+       home()
 
-st.title("Skin Cancer Detection App")
-st.write("Upload an image to get a prediction.")
+    elif page == "🧐 Quick Check":
+        quickcheckr()
 
-# Image upload widget
-uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
+    elif page == "🔎 Skin Check":
+        bodycheckr()
 
-if uploaded_file:
-    # Load and preprocess the image
-    img = image.load_img(uploaded_file, target_size=(56, 56))
-    img_array = image.img_to_array(img)
-    img_array = np.expand_dims(img_array, axis=0) / 255.0
+    elif page == "📊 Dashboard":
+        skintrackr()
 
-    # Make predictions
-    predictions = predict_image(model, img_array)
-    st.write("Prediction Probabilities:", predictions)
-    st.write(f"Predicted Class: {np.argmax(predictions)}")
+    elif page == "📋 Data Records":  # Matching the page with the emoji
+        skindatar()
+
+if __name__ == "__main__":
+    main()
