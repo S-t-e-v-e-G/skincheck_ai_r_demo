@@ -1,12 +1,11 @@
-# skincheck_ai_r_demo
+# SKINCHECK-ai-R
 
-Overview:
+**Overview:**
 Working demo of project as part of Le Wagon Tokyo data science bootcamp. Project aimed to reduce impact of skin cancer by making scanning and screening accessible.
 
 There are ~7M cases of Skin Cancer globally. We believed that by making screening and scanning more accessible it could help reduce the impact that skin cancer has.
 
-See following link for further rading and showcase:
-
+For further rading and showcase see the following [Link](https://github.com/S-t-e-v-e-G/skincheck_ai_r_demo/blob/e5b7c212a12e64ccae67dddd71276fb8f7e1fe4f/Skincheck-ai-r%20Demo.pdf).
 
 
 
