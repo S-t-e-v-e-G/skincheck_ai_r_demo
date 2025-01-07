@@ -6,7 +6,7 @@ import streamlit as st
 
 def load_model_from_github(model_url):
     """Download and load the model from a public GitHub repo."""
-    model_path = "https://raw.githubusercontent.com/S-t-e-v-e-G/skincheck_ai_r_demo/main/skincheckr-demo.keras"
+    model_path = "skincheckr-demo.keras"
 
     # Check if model already exists locally
     if not os.path.exists(model_path):
